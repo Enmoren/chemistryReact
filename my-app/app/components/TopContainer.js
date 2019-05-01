@@ -21,7 +21,7 @@ class TopContainer extends Component {
   render() {
     return (
       <>
-        <Navi title="Top"/>
+        <Navi title="Paper Panacea"/>
         <TopContent
           title={this.state.data.title}
           subtitle={this.state.data.subtitle}

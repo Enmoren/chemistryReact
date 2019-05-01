@@ -46,10 +46,10 @@ const Navi = ({ title }) => {
         >
           <ListSubheader style={{ color: "white" }}>Menu</ListSubheader>
           <ListItem component={Link} to="/" button>
-            Top
+            Homepage
           </ListItem>
           <ListItem component={Link} to="/sample" button>
-            Sample
+            Upload
           </ListItem>
         </List>
       </Drawer>

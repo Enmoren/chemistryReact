@@ -1,30 +1,18 @@
-import React,　{Component} from 'react';
-import React, {Component} from 'react';
-import {storage} from '../firebase';
-import PropTypes from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types'; 
 import Button from "@material-ui/core/Button";
 import SampleActionCreators from "../actions/SampleActionCreators";
 
 const SampleContent = ({ title, subtitle, text }) => {
-  state = {};
-  const handleClick = e => {
-    if(e.target.files[0]){
-      const image = e.target.files[0];
-      setState(()=>({image}));
-    }
-  };
-
-  const handleUpload = () => {
-    const {image} = state;
-    const uploadTask = storage.ref('images/${image.name}').put(image);
-    uploadTask.on('state_changed');
+  const handleClick = () => {
+    SampleActionCreators.actionCreator001();
   };
 
   return (
     <div>
       <div
         style={{
-          backgroundImage:
+          backgroundImage: 
             "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/hero.jpeg)",
           height: "40vh",
           backgroundSize: "cover",
@@ -57,17 +45,6 @@ const SampleContent = ({ title, subtitle, text }) => {
         >
           Superfast React development tool
         </div>
-        <div style={{padding: 32}}>
-        <input type = "file"/>
-          <Button
-            variant="contained"
-            style={{decoration: "none", backgroundColor: "transparent", border:  "1.5px solid #FFF", color: "white", fontSize: "20px"}}
-            size="large"
-            align="center"
-          >
-            Start Here
-          </Button>
-          </div>
       </div>
       <div style={{ padding: 32 }}>
         <div

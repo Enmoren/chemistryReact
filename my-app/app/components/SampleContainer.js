@@ -21,7 +21,7 @@ class SampleContainer extends Component {
   render() {
     return (
       <>
-        <Navi title="Sample"/>
+        <Navi title="Upload"/>
         <SampleContent
           title={this.state.data.title}
           subtitle={this.state.data.subtitle}
